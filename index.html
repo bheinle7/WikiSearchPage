@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>Wiki Search</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -13,18 +14,23 @@
     <div class="row justify-content-center borders">
       <h1>Wiki Search</h1>
     </div>
-    <form>
-      <div class="row justify-content-center">
-        <form id="form-container" class="form-container">
-          <label for="city">City: </label><input type="text" id="city" value="">
-          <button id="submit-btn">Submit</button>
-        </form>
+    <div class="row borders row-width search-box">
+      <input type="text" id="input" value="" class="input-size outline">
+      <button id="submit-btn" class="btn-props"><i id="find" class="fa fa-search"></i></button>
+    </div>
+
+  <div id="wiki0" class="row borders row-width">
+    <div id="img1" class="col-sm-4 borders">Poo</div>
+    <div id="title1" class="col-sm-8 borders">
+      <p>Poo</p>
+      <div class="row">
+        <div id="snippet1" class="col-sm-12 borders">
+          <p>Doo</p>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
-  <div id="wiki0" class="row borders justify-content-center"></div>
-  <div id="wiki1" class="row borders justify-content-center"></div>
-  <div id="wiki2" class="row borders justify-content-center"></div>
+    </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>

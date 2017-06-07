@@ -1,8 +1,32 @@
-.borders {
+.border {
   border: 1px solid black;
 }
-
-input[type=text] {
-  width: 50%;
-  border: 2px solid black;
+.input-size {
+  width: 90%;
+  border: none;
 }
+.btn-props {
+  width: 10%;
+  background-color: white;
+  border: none;
+}
+
+
+.row-width {
+  width: 50%;
+  margin: auto;
+}
+
+.search-box {
+  border: 1px solid orange;
+}
+
+#find {
+  color: orange;
+}
+
+.outline {
+ outline: none;
+}
+
+button:focus { outline: none; }
