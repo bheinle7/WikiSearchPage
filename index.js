@@ -14,12 +14,7 @@ $(document).ready(function() {
         $("#img0").empty();
         $('#img0').css('background-image', 'url(' + searchResults.query.pages[0].thumbnail.source + ')');
         $("#title0").text(searchResults.query.pages[0].title); //title
-        $("#snippet0").text(searchResults.query.pages[0].terms.description[0]); //snippet
-        $("#wiki1").addClass("results-border")
-        $("#img1").empty();
-        $('#img1').css('background-image', 'url(' + searchResults.query.pages[1].thumbnail.source + ')');
-        $("#title1").text(searchResults.query.pages[1].title); //title
-        $("#snippet1").text(searchResults.query.pages[1].terms.description[0]); //snippet
+        $("#snippet0").text(searchResults.query.pages[0].terms.description[0]); //snippetS
       }
     });
   });
