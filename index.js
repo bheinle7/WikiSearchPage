@@ -5,14 +5,21 @@ $(document).ready(function() {
       "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
       search +
       "&prop=pageimages&format=json&callback=wikiCallback";
-    var wikiSearchUrl1 = "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&list=search&utf8=1&srsearch=" + search;
+    var wikiSearchUrl1 = "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch="+search+"&gpslimit=10&prop=pageimages%7Cpageterms&piprop=thumbnail&pithumbsize=100&pilimit=10&redirects=&wbptterms=description&format=json&callback=wikiCallback";
     $.ajax({
-      url: wikiSearchUrl,
+      url: wikiSearchUrl1,
       dataType: "jsonp",
       success: function(searchResults) {
-        $("#img1").append('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/' + search + '.jpg/80px-' + search + '.jpg" alt="poo"/>'); //picture
-        $("p:first").text(searchResults[1][0]); //title
-        $("p:last").text(searchResults[2][0]); //snippet
+        $("#wiki0").addClass("results-border")
+        $("#img0").empty();
+        $('#img0').css('background-image', 'url(' + searchResults.query.pages[0].thumbnail.source + ')');
+        $("#title0").text(searchResults.query.pages[0].title); //title
+        $("#snippet0").text(searchResults.query.pages[0].terms.description[0]); //snippet
+        $("#wiki1").addClass("results-border")
+        $("#img1").empty();
+        $('#img1').css('background-image', 'url(' + searchResults.query.pages[1].thumbnail.source + ')');
+        $("#title1").text(searchResults.query.pages[1].title); //title
+        $("#snippet1").text(searchResults.query.pages[1].terms.description[0]); //snippet
       }
     });
   });
