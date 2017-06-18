@@ -1,19 +1,28 @@
+body {
+  padding-top: 15%;
+  font-family: monospace;
+}
+.position {
+  margin: 50% auto;
+}
 .border {
   border: 1px solid black;
 }
+
 .results-border {
   border-right: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   border-left: 1px solid lightgray;
 }
+
 .input-size {
-  width: 90%;
+  width: 80%;
   border: none;
 }
-.btn-props {
+
+.icon-props {
   width: 10%;
-  background-color: white;
-  border: none;
+  padding: 5px;
 }
 
 .row-width {
@@ -22,11 +31,11 @@
 }
 
 .search-box {
-  border: 1px solid orange;
+  border: 1px solid #222;
 }
 
 .lens {
-  color: orange;
+  color: black;
 }
 
 .thumbnail {
@@ -34,14 +43,34 @@
   background-size: cover;
   background-position: center;
 }
+
 p {
   margin: 0;
 }
-.outline {
- outline: none;
-}
-p:first-of-type {
-    font-weight: bold;
+
+.remove-outline {
+  outline: none;
 }
 
-button:focus { outline: none; }
+p:first-of-type {
+  font-weight: bold;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

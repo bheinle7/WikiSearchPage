@@ -10,30 +10,45 @@
 </head>
 
 <body>
-  <div class="container-fluid borders">
-    <div class="row justify-content-center borders">
+  <div class="container">
+    <div class="row justify-content-center">
       <h1>Wiki Search</h1>
     </div>
-    <div class="row borders row-width search-box">
-      <input type="text" id="input" value="" class="input-size outline">
-      <button id="submit-btn" class="btn-props"><i id="find" class="fa fa-search lens"></i></button>
+    <div class="row row-width search-box">
+      <input type="text" id="input" value="" class="input-size remove-outline">
+      <span><i id="search" class="fa fa-search lens icon-props"></i></span><span><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" alt="Random Wiki Page"><i id="random" class="fa fa-random icon-props"></i></a></span>
     </div>
 
-    <div id="wiki0" class="row borders row-width">
-      <div id="img0" class="col-sm-4 borders thumbnail"></div>
-      <div id="description0" class="col-sm-8 borders ">
-        <p id="title0"></p>
-        <p id="snippet0"></p>
+    <a id="link0" href="" target="_blank">
+      <div id="wiki0" class="row borders row-width">
+        <div id="img0" class="col-sm-4 borders thumbnail"></div>
+        <div id="description0" class="col-sm-8 borders ">
+          <p id="title0"></p>
+          <p id="snippet0"></p>
+        </div>
       </div>
-    </div>
+    </a>
 
-    <div id="wiki1" class="row borders row-width">
-      <div id="img1" class="col-sm-4 borders thumbnail"></div>
-      <div id="description1" class="col-sm-8 borders ">
-        <p id="title1"></p>
-        <p id="snippet1"></p>
+    <a id="link1" href="" target="_blank">
+      <div id="wiki1" class="row borders row-width">
+        <div id="img1" class="col-sm-4 borders thumbnail"></div>
+        <div id="description1" class="col-sm-8 borders ">
+          <p id="title1"></p>
+          <p id="snippet1"></p>
+        </div>
       </div>
-    </div>
+    </a>
+
+    <a id="link2" href="" target="_blank">
+      <div id="wiki2" class="row borders row-width">
+        <div id="img2" class="col-sm-4 borders thumbnail"></div>
+        <div id="description2" class="col-sm-8 borders ">
+          <p id="title2"></p>
+          <p id="snippet2"></p>
+        </div>
+      </div>
+    </a>
+
 
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
