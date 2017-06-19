@@ -20,6 +20,23 @@ $(document).ready(function() {
         url: wikiSearchUrl1,
         dataType: "jsonp",
         success: function(searchResults) {
+
+          $("#input").one("keypress", function(key) {
+            if (key.which == 13) {
+              $("#search").trigger('click');
+            }
+          });
+
+          $("#search").click(function() {
+            if ($("#input").val()) {
+              $("#linksearch").attr("href", "https://en.wikipedia.org/wiki/" + searchResults.query.pages[0].title);
+              $("#linksearch").attr("target", "_blank");
+            } else {
+              $("#linksearch").attr("href", "#");
+              $('#linksearch[target="_blank"]').removeAttr('target');
+            };
+          });
+
           $("#wiki0").addClass("results-border")
           $("#img0").empty();
           $('#img0').css('background-image', 'url(' + searchResults.query.pages[0].thumbnail.source + ')');
